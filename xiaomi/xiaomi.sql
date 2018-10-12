@@ -1,7 +1,7 @@
-﻿-- 1.创建小米商城数据库  -xiaomi
+-- 1.创建小米商城数据库  -xiaomi
 CREATE DATABASE xiaomi CHARSET=utf8;
 USE xiaomi;
- 
+
 -- 2.创建小米图片轮播表
 CREATE TABLE xm_imagelist(
   id      INT PRIMARY KEY AUTO_INCREMENT,
