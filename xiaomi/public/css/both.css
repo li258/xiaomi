@@ -1,0 +1,46 @@
+/* 公用组件库 */
+body{
+  margin: 0;
+  /* font-size: 14px; */
+  background: #faf9f9;
+}
+/* .页面公用大小 */
+.page_size{
+  width: 1220px;
+  margin: 0 auto;
+}
+/* .小米主题色按钮 */
+.btn-xiaomi{
+  color: black;
+}
+.btn-xiaomi:hover{
+  text-decoration: none;
+  color: #FE6606;
+  background: #fff;
+  /* font-weight: bold; */
+}
+/* 小米通用标志 */
+.allicon{
+  display: inline-block;
+  background: url("../img/allicon1.png");
+}
+.allicon:hover{
+  background: url("../img/allicon2.png");
+}
+/* 列表栅格化横向排列 */
+.nav{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+/*.设置颜色字体*/
+.text_yellow{
+  color: #FE6606;
+}
+.text_purple{
+  color: #884a9c;
+}

@@ -1,0 +1,84 @@
+/* 顶部导航 */
+.header_top{
+  background: #323232;
+  font-size: 12px;
+  height: 40px;
+}
+.header_top span{
+  color: rgb(80, 74, 70);
+  padding:0 0.3em;
+}
+.header_top a{
+color: #afafaf;
+text-decoration: none;
+}
+.header_top a:hover{
+color: #fff;
+}
+.header_top .ht_left{
+  line-height: 40px;
+  float: left;
+}
+.header_top .ht_right{
+  line-height: 40px;
+  float: right;
+}
+.header_top  .ht_right .shopping_car{
+display: inline-block;
+margin-left: 10px;
+padding: 0 10px;
+font-weight: bold;
+}
+
+.header_top  .ht_right .shopping_car:hover{
+  color: #FE6606;
+  background: #fff;
+  font-weight: bold;
+}
+
+.header_top .ht_right .shopping_car img{
+  position: relative;
+  top: 5px;
+  width: 1.5em;
+}
+/* 标志导航 */
+.header_down{
+  margin: 20px auto;
+}
+.header_down .logo{
+  float: left;
+}
+.header_down ul{
+  margin-left: 180px;
+  line-height: 60px;
+}
+.header_down ul li .btn-xiaomi{
+  padding: 20px 14px;
+  text-decoration: none;
+}
+.header_down .search{
+  float: right;
+  margin-top: 10px;
+}
+.header_down .search :first-child{
+  top:-10px;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+.header_down .search .search_icon{
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(158, 158, 158);
+  border-left: 0;
+  width: 45px;
+  height: 45px;
+  background: url("../img/search1.png") center no-repeat;
+  background-size:23px 23px;
+} 
+.header_down .search .search_icon:hover{
+  border-color: #FE6606;
+  background: #FE6606 url("../img/search2.png") center no-repeat ;
+  background-size:23px 23px;
+}

@@ -1,0 +1,59 @@
+/* 商城主页 */
+iframe{
+  width: 100%;
+  height: 100%;
+}
+footer iframe{
+  width: 100%;
+  height: 420px;
+}
+/* 轮播层 */
+/* 轮播左侧列表 */
+section .home_hero_icon{
+  position: absolute;
+  background: rgba(34, 34, 34, 0.5);
+  width: 234px;
+  height: 460px;
+}
+section .home_hero_icon .hero_list{
+  padding: 24px 0;
+  margin: 0;;
+  list-style:none;
+}
+section .home_hero_icon .hero_list li{
+  padding: 10px 30px;
+}
+section .home_hero_icon .hero_list li:hover{
+  background: #FE6606;
+}
+section .home_hero_icon .hero_list li a{
+  color: #fff;
+  text-decoration: none;
+}
+section .home_hero_icon .hero_list li i{
+  color: #fff;
+  font-size: 22px;
+  float: right;
+  line-height: 20px;
+}
+/* 轮播图 */
+.home_slider img{
+  height: 460px;
+}
+/* 轮播下按钮  */
+.hero_sub{
+  margin:20px 0;
+}
+/* 左侧按钮 */
+.hero_sub .hero_channle{
+width: 234px;
+}
+.hero_sub .hero_channle ul li{
+  height: 85px;
+}
+.hero_sub .hero_channle ul li img{
+  opacity:0.9;
+}
+.hero_sub .hero_channle ul li img:hover{
+opacity: 1;
+}

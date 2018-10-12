@@ -1,0 +1,93 @@
+/* 底部信息栏 */
+.footer_bg{
+  background: #fff;
+}
+/* 售后服务导航 */
+.footer_service{
+  padding: 30px 0;
+  border-bottom: 1px solid #dfdfdf; 
+}
+.footer_service ul li{
+  border-left: 1px solid #dfdfdf;
+  padding: 0 55px;
+}
+.footer_service ul li:first-child{
+  border:0;
+}
+.footer_service .service_icon{
+  margin-right:5px; 
+  width: 25px;
+  height: 25px;
+  vertical-align:bottom;
+}
+.footer_service .icon_service{
+  background-position: 0px 0px;
+}
+.footer_service .icon_seven{
+  background-position: -30px 0px;
+}
+.footer_service .icon_fif{
+  background-position: -60px 0px;
+}
+.footer_service .icon_post{
+  background-position: -90px 0px;
+}
+.footer_service .icon_location{
+  background-position: -120px 0px;
+}
+/* 底层信息链接 */
+.footer_link{
+  height: 200px;
+  padding: 20px 0;
+}
+.footer_link dl{
+  float: left;
+  width: 158px;
+}
+.footer_link dl dt{
+  padding:20px 0;
+  font-weight: normal;
+}
+.footer_link dl dd a{
+  color:#979797; 
+}
+.footer_link dl dd a:hover{
+  color: #FE6606;
+  text-decoration: none;
+}
+/* 信息链接右 */
+.footer_link_r{
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0px 55px;
+  border-left: 1px solid #dfdfdf;
+}
+.footer_link_r :first-child{
+  margin: 0;
+  color: #FE6606;
+  font-size:24px;
+}
+.footer_link_r :nth-child(2){
+margin: 0;
+}
+.footer_link_r a{
+  border: 1px solid #FE6606;
+  padding: 4px 8px;
+  color: #FE6606;
+}
+.footer_link_r a:hover{
+  background: #fe6606;
+  color:#fff;
+  text-decoration: none;
+}
+.footer_info{
+  color: #979797;
+}
+.footer_info div{
+  float: left;
+  margin: 5px 10px 5px 0px;
+}
+.footer_bg h1{
+  text-align: center;
+}
