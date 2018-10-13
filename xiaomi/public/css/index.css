@@ -5,9 +5,9 @@ iframe{
 }
 footer iframe{
   width: 100%;
-  height: 420px;
+  height: 520px;
 }
-/* 轮播层 */
+/* 轮播层 **********************************************/
 /* 轮播左侧列表 */
 section .home_hero_icon{
   position: absolute;
@@ -30,23 +30,26 @@ section .home_hero_icon .hero_list li a{
   color: #fff;
   text-decoration: none;
 }
-section .home_hero_icon .hero_list li i{
+section .home_hero_icon .hero_list li span{
   color: #fff;
   font-size: 22px;
   float: right;
   line-height: 20px;
 }
-/* 轮播图 */
+/* 轮播图 ********************************************/
 .home_slider img{
+  width: 1220px;
   height: 460px;
 }
-/* 轮播下按钮  */
+/* 轮播下组件  */
 .hero_sub{
+  height: 170px;
   margin:20px 0;
 }
-/* 左侧按钮 */
+/* 轮播下 左侧按钮 */
 .hero_sub .hero_channle{
 width: 234px;
+float: left;
 }
 .hero_sub .hero_channle ul li{
   height: 85px;
@@ -56,4 +59,139 @@ width: 234px;
 }
 .hero_sub .hero_channle ul li img:hover{
 opacity: 1;
+}
+/* 轮播下 右侧 */
+.hero_sub .hero_sub_r{
+float: right;
+}
+.hero_sub .hero_sub_r ul li{
+  margin-left:12px;
+}
+.hero_sub .hero_sub_r ul li img{
+  height: 170px;
+}
+.hero_sub .hero_sub_r ul li img:hover{
+  box-shadow:5px 5px 20px #686868;
+}
+/* 小米闪购 ********************************************/
+.flashbuy{
+  margin-top: 60px;
+}
+/* 倒计时 */
+.flashbuy .flash_time{
+  width: 234px;
+  height: 340px;
+  border-top: 1px solid #E43935;
+  background: #F0ECEC;
+  text-align:center;
+  float: left;
+}
+.flashbuy .flash_time p:first-child{
+  font-size: 21px;
+  margin-top: 60px;
+  color:#E43934;
+}
+.flashbuy .flash_time p:nth-child(3){
+  color: #818181;
+}
+.flashbuy .flash_time .time_num{
+  margin-top: 30px;
+  font-size: 29px;
+}
+.flashbuy .flash_time .time_num span{
+  display: inline-block;
+  font-size: 26px;
+  line-height: 46px;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  background: #5F5650;
+}
+/* 滑动列表 *************************/
+.flashbuy .flash_list{
+  overflow: hidden;
+  height: 340px;
+}
+.flashbuy .flash_list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left:0px;
+  transition: margin-left 0.5s ease;
+}
+.flashbuy .flash_list ul li{
+  float: left;
+  width: 234px;
+  height: 340px;
+  border-top: 1px solid #FE6606;
+  background: #fefefe;
+  text-align:center;
+  margin-left: 12px;
+}
+.flashbuy .flash_list ul li:hover{
+  box-shadow:0px 3px 20px #686868;
+}
+.flash_list ul li a{
+  margin-top: 50px;
+  display: block;
+  position: relative;
+}
+.flash_list ul li a span{
+  background: #E43935;
+  color: #fff;
+  position: absolute;
+  top: -50px;
+  left: 38%;
+}
+.flash_list ul li a img{
+  width: 160px;
+}
+.flash_list ul li a p:nth-child(3){
+  margin: 10px;
+  color: #000;
+}
+.flash_list ul li a p:nth-child(4){
+  margin: 4px;
+  color:#818181;
+}
+.flash_list ul li a p:nth-child(5){
+  margin: 0;
+  color: #FE6606;
+}
+.flash_list ul li a p del{
+  color: #818181;
+}
+/* 手机模块 ********************************************/
+/* 导航图 */
+.home_phone{
+  margin-top: 60px;
+}
+.home_phone div:first-child a img{
+ width: 1220px;
+}
+/* 手机图表 ************/
+.phone_title p a{
+  font-size:12px;
+  float: right;
+  color: #686868;
+}
+.phone_title p a span{
+  font-size: 20px;
+}
+.phone_title p a:hover{
+  color: #FE6606;
+}
+.phone_list{
+  height: 620px;
+}
+.phone_list div:first-child{
+  float: left;
+}
+.phone_list div img{
+  position: relative;
+  width: 234px;
+  transition: all 0.5s;
+}
+.phone_list>div>img:hover{
+  margin-top: -4px;
 }
