@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  div.p1,div.d1,div.d2{
+    width: 100px;
+    height: 100px;
+    transition: all 1;
+  }
+  div.d1{
+    background: #aaa;
+  float: left;
+  z-index: 11;
+  }
+  div.p1:hover{
+    transform: rotateY(60deg);
+  }
+  div.d2{
+    color: aqua;
+    background: #000;
+    box-sizing: border-box;
+  }
+  div.d2 a{
+    float: left;
+  }
+  </style>
+</head>
+<body>
+  <div class="p1">
+    <div class="d1">
+      aaaaaaaa
+    </div>
+    <div class="d2">
+     <a href=""> bbbbbbbb</a>
+    </div>
+  </div>
+</body>
+</html>
