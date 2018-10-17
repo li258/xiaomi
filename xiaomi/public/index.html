@@ -10,26 +10,109 @@
   <link rel="Bookmark" href="img/aa.ico">
   <link rel="stylesheet" href="css/both.css">
   <link rel="stylesheet" href="css/index.css">
+  <script src="js/vue.js"></script>
+  <!-- <script src="js/qs.min.js"></script> -->
+  <script src="js/axios.min.js"></script>
 </head>
 <body>
-  <iframe src="header.html" frameborder="0" ></iframe>
+  <header id="header"></header>
   <!-- 商城主页 -->
-  <section class="page_size">
+  <section class="page_size" id="main">
     <!-- 按钮轮播图 -->
     <div class="home_hero"> 
     <!-- 按钮列表 -->
       <div class="home_hero_icon">
         <ul class="hero_list">
-          <li><a href="#">手机 电话卡</a><span>></span></li>
-          <li><a href="#">电视 盒子</a><span>></span></li>
-          <li><a href="#">笔记本 平板</a><span>></span></li>
-          <li><a href="#">家电 插线板</a><span>></span></li>
-          <li><a href="#">出行 穿戴</a><span>></span></li>
-          <li><a href="#">智能 路由器</a><span>></span></li>
-          <li><a href="#">电源 配件</a><span>></span></li>
-          <li><a href="#">健康 儿童</a><span>></span></li>
-          <li><a href="#">耳机 音响</a><span>></span></li>
-          <li><a href="#">生活 箱包</a><span>></span></li>
+          <li><a href="" data-trigger="dropright">手机 电话卡<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">电视 盒子<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(18,24)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">笔记本 平板<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(28,40)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">家电 插线板<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(24,28)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">出行 穿戴<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">智能 路由器<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">电源 配件<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">健康 儿童<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">耳机 音响<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
+          <li><a href="" data-trigger="dropright">生活 箱包<span>></span></a>
+            <div class="hero_menu" >
+              <ul class="nav">
+                <li v-for="p in res.slice(1,18)">
+                  <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
+                </li>
+              </ul>  
+            </div>
+          </li>
         </ul>
       </div>
       <!-- 轮播图 -->
@@ -140,62 +223,15 @@
           </div>
           <div class="list_product">
             <ul>
-              <li><a href="">
-              <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
+              <li v-for="p in res.slice(4,12)">
+                <a href="">
                 <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/phone_pms_1.jpg" alt="">
-                <p>小米8 青春版 4GB+64GB</p>
-                <p>潮流镜面渐变色，2400万自拍旗舰</p>
-                <p>1399元 <del>80元</del></p>
-              </a></li>
+                <img :src="p.img_url" alt="">
+                <p>{{p.pname}}{{p.details}}</p>
+                <p>{{p.promise}}</p>
+                <p>{{p.price}}元 <del>{{p.price+200}}元</del></p>
+              </a>
+            </li>
             </ul>
           </div>
         </div>
@@ -225,61 +261,13 @@
           </div>
           <div class="list_product">
             <ul>
-              <li><a href="">
+              <li v-for="p in res.slice(19,27)">
+                <a href="">
                 <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
-              </a></li>
-              <li><a href="">
-                <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
-                <img src="img/app_pms_1.png" alt="">
-                <p>小米电视4A 55英寸</p>
-                <p>4K高清HDR / 真四核64位高性能处理器</p>
-                <p>2299元 <del>2700元</del></p>
+                <img :src="p.img_url" alt="">
+                <p>{{p.pname}}</p>
+                <p>{{p.promise}}</p>
+                <p>{{p.price}}元 <del>{{p.price+200}}元</del></p>
               </a></li>
             </ul>
           </div>
@@ -298,48 +286,15 @@
       <!-- 推荐列表 -->
       <div class="flash_list">
         <ul>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span></span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
+          <li v-for="p in res.slice(21,31)">
+            <a href="">
+            <span>　热销　</span>
+            <img :src="p.img_url" alt="">
+            <p>{{p.pname}}</p>
+            <p></p>
+            <p>{{p.price}}元 <del>{{p.price+200}}元</del></p>
+          </a>
+        </li>
         </ul>
       </div>
     </div>
@@ -441,5 +396,8 @@
     </div>
   </section>
   <footer><iframe src="footer.html" frameborder="0" ></iframe></footer>   
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

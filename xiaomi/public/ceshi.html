@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body>ul>li{
+      background: #acacac;
+      float: left;
+      width: 100px;
+    }
+    .header_menu{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+    <a href="#header_m1" class="btn-xiaomi" data-trigger="dropdown">小米手机</a>
+    <div class="header_menu" id="header_m1" >
+      <ul>
+        <li>11asdddddddddddddddddddd</li>
+      </ul>  
+    </div>
+  </li>
+  <li>
+    <a href="#header_m1" class="btn-xiaomi" data-trigger="dropdown">小米手机</a>
+    <div class="header_menu" id="header_m1" >
+      <ul>
+        <li>22asasdasdasddd</li>
+      </ul>  
+    </div>
+  </li>
+</ul>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+      var $header_menu=$(".header_menu");
+      // console.log($header_menu);
+      $header_menu.hide();
+      $("[data-trigger=dropdown]").parent()
+      .mouseover(function(){
+        // console.log($(this));
+        // $this=this;
+         $(this).children(":last-child").show();
+      })	
+      .mouseout(function(){
+         $(this).children(":last-child").hide();
+      })	
+  </script>
+</body>
+</html>

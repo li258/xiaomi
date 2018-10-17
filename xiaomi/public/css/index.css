@@ -1,45 +1,78 @@
 /* 商城主页 */
-iframe{
-  width: 100%;
-  height: 100%;
-}
 footer iframe{
   width: 100%;
   height: 520px;
 }
 /* 轮播层 **********************************************/
 /* 轮播左侧列表 */
+/* section .home_hero{
+  position: relative;
+} */
 section .home_hero_icon{
   position: absolute;
+  top:121px;
   background: rgba(34, 34, 34, 0.5);
   width: 234px;
   height: 460px;
+  z-index: 5;
 }
 section .home_hero_icon .hero_list{
   padding: 24px 0;
-  margin: 0;;
+  margin: 0;
   list-style:none;
 }
-section .home_hero_icon .hero_list li{
+.home_hero_icon>.hero_list>li{
   padding: 10px 30px;
+  /* height: 20px; */
 }
-section .home_hero_icon .hero_list li:hover{
+.home_hero_icon>.hero_list>li:hover{
   background: #FE6606;
 }
-section .home_hero_icon .hero_list li a{
+.home_hero_icon>.hero_list>li>a{
   color: #fff;
   text-decoration: none;
 }
-section .home_hero_icon .hero_list li span{
-  color: #fff;
+.home_hero_icon>.hero_list>li>a>span{
   font-size: 22px;
   float: right;
   line-height: 20px;
 }
+.home_hero_icon .hero_list .hero_menu{
+  position: absolute;
+  top: 40px;
+  left:236px;
+  width: 960px;
+  height: 460px;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 3px 5px 20px #acacac;
+  transition: all 1s;
+}
+.hero_list .hero_menu li{
+  width: 200px;
+  margin: 20px;
+}
+.hero_list .hero_menu li a span{
+  line-height: 50px;
+  font-size: 12px;
+}
+.hero_list .hero_menu li a img{
+  width: 50px;
+  vertical-align: middle;
+}
+
 /* 轮播图 ********************************************/
+.home_slider{
+ overflow: hidden;
+ width: 1220px;
+ height: 460px;
+}
 .home_slider img{
+  opacity: 1;
+  left: 0px;
   width: 1220px;
   height: 460px;
+  transition: all 1s;
 }
 /* 轮播下组件  */
 .hero_sub{
@@ -421,7 +454,7 @@ float: right;
 }
 .home_video div:first-child{
   height: 40px;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 .home_video div:first-child p{
   margin: 0;
@@ -443,6 +476,7 @@ float: right;
 }
 .video_list ul{
   list-style: none;
+  padding: 0;
 }
 .video_list ul li{
   width: 280px;
@@ -450,23 +484,28 @@ float: right;
   background: #fff;
   text-align: center;
   float: left;
-  margin-left: 20px;
+  margin-left: 32px;
+  transition: all 0.6s;
 }
 .video_list ul li:first-child{
-  margin: 0;
+margin: 0;
+}
+.video_list ul li:hover{
+  margin-top: -4px;
+  box-shadow: 0px 5px 20px #818181;
 }
 .video_list ul li a{
   display:inline-block;
   width: 280px;
   height: 180px;
   background: url("../img/video_1.jpg") center no-repeat;
-  background-size: 280px;
+  background-size: 290px 180px;
 }
 .video_list ul li a span{
   position: relative;
   left: -110px;
   top: 140px;
-  font-size: 19px;
+  font-size: 18px;
   color: #fff;
   border: 3px solid #fff;
   border-radius: 0.8rem;

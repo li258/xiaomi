@@ -48,13 +48,16 @@ font-weight: bold;
 .header_down .logo{
   float: left;
 }
-.header_down ul{
+.header_down .header_list{
   margin-left: 180px;
   line-height: 60px;
+  list-style: none;
+  padding: 0;
 }
-.header_down ul li .btn-xiaomi{
-  padding: 20px 14px;
-  text-decoration: none;
+.header_down>.header_list>li{
+  float: left;
+  padding: 0 14px;
+  color: #323232;
 }
 .header_down .search{
   float: right;
@@ -81,4 +84,33 @@ font-weight: bold;
   border-color: #FE6606;
   background: #FE6606 url("../img/search2.png") center no-repeat ;
   background-size:23px 23px;
+}
+/* 二级导航菜单栏 */
+ .header_list .header_menu{
+  position: absolute;
+  left: -40px;
+  opacity: 0;
+  width: 100%;
+  height: 280px;
+  background: #fff;
+  z-index: 10;
+  transition: all 0.8s;
+
+}
+.header_list .header_menu ul{
+  list-style: none;
+  line-height: 20px;
+  margin-left: 11rem;
+}
+.header_list .header_menu ul li{
+  float: left;
+  text-align: center;
+  padding: 14px 20px;
+  width: 234px;
+}
+.header_list .header_menu ul li a img{
+  width: 70%;
+}
+.header_list .header_menu ul li p:last-child{
+  color: #FE6606;
 }
