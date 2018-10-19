@@ -26,7 +26,7 @@
           <li><a href="" data-trigger="dropright">手机 电话卡<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(1,17)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -35,7 +35,7 @@
           <li><a href="" data-trigger="dropright">电视 盒子<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(18,24)">
+                <li v-for="p in res.slice(18,25)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -53,7 +53,7 @@
           <li><a href="" data-trigger="dropright">家电 插线板<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(24,28)">
+                <li v-for="p in res.slice(41,46)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -62,7 +62,7 @@
           <li><a href="" data-trigger="dropright">出行 穿戴<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(46,48)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -71,7 +71,7 @@
           <li><a href="" data-trigger="dropright">智能 路由器<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(48,52)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -80,7 +80,7 @@
           <li><a href="" data-trigger="dropright">电源 配件<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(52,57)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -89,7 +89,7 @@
           <li><a href="" data-trigger="dropright">健康 儿童<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(51,59)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -98,7 +98,7 @@
           <li><a href="" data-trigger="dropright">耳机 音响<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(51,59)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -107,7 +107,7 @@
           <li><a href="" data-trigger="dropright">生活 箱包<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,18)">
+                <li v-for="p in res.slice(51,59)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -146,10 +146,10 @@
     <div class="flashbuy">
       <div>
         <p class="xm_title">小米闪购</p>
-        <span class="list_btn">
-          <a href="" class="btn-xiaomi">&lt;</a>
-          <a href="" class="btn-xiaomi">&gt;</a>
-        </span>
+        <div class="list_btn">
+          <a class="btn-xiaomi">&lt;</a>
+          <a class="btn-xiaomi">&gt;</a>
+        </div>
       </div>
       <!-- 倒计时 -->
       <div class="flash_time">
@@ -157,54 +157,21 @@
         <img src="img/flash.png" alt="">
         <p>距离开场还有</p>
         <div class="time_num">
-          <span>01</span> : <span>12</span> : <span>43</span>
+          <span>00</span> : <span>00</span> : <span>00</span>
         </div>
       </div>
       <!-- 滑动列表 -->
       <div class="flash_list">
         <ul>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
-          <li><a href="#">
-            <span>1元秒杀</span>
-            <img src="img/flash_p1.jpg" alt="">
-            <p>小米支架式自拍杆</p>
-            <p>解放双手，定格美好的镜头</p>
-            <p>1元 <del>80元</del></p>
-          </a></li>
+          <li v-for="p in res.slice(40,52)">
+            <a href="#">
+            <span> 秒杀价 </span>
+            <img :src="p.img_url" alt="">
+            <p>{{p.pname}}</p>
+            <p>{{p.promise}}</p>
+            <p>{{p.price-100}}元 <del>{{p.price}}元</del></p>
+          </a>
+        </li>
         </ul>
       </div>
     </div>
@@ -261,7 +228,7 @@
           </div>
           <div class="list_product">
             <ul>
-              <li v-for="p in res.slice(19,27)">
+              <li v-for="p in res.slice(42,50)">
                 <a href="">
                 <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
                 <img :src="p.img_url" alt="">
@@ -291,7 +258,7 @@
             <span>　热销　</span>
             <img :src="p.img_url" alt="">
             <p>{{p.pname}}</p>
-            <p></p>
+            <p>{{p.promise}}</p>
             <p>{{p.price}}元 <del>{{p.price+200}}元</del></p>
           </a>
         </li>
@@ -312,7 +279,7 @@
             </div>
             <div class="comment_p2">
               <p>安装简洁方便，信号非常不错！已经完美吃了好几把鸡了！推荐给大家！大爱小米！</p>
-              <p>来自于 追溯PPQ 的评价</p>
+              <p>来自于 追溯PPQ | 的评价</p>
               <button>查看商品详情</button> 
             </div>
             </a>
@@ -320,13 +287,13 @@
           <li>
             <a href="">
             <div class="comment_p1">
-            <img src="img/comment_1.jpg" alt="">
-            <p>小米路由器3  →</p> 
-            <p>149元</p>
+            <img src="img/comment_2.jpg" alt="">
+            <p>米家车载空气净化器  →</p> 
+            <p>449元</p>
             </div>
             <div class="comment_p2">
-              <p>安装简洁方便，信号非常不错！已经完美吃了好几把鸡了！推荐给大家！大爱小米！</p>
-              <p>来自于 追溯PPQ 的评价</p>
+              <p>外形简洁大方，大爱小米！全家人都在用小米的产品，真心不错，最主要的是性价比高。给客服妹子一个大大的微笑！</p>
+              <p>来自于 酸小妞~ | 的评价</p>
               <button>查看商品详情</button> 
             </div>
             </a>
@@ -334,13 +301,13 @@
           <li>
             <a href="">
             <div class="comment_p1">
-            <img src="img/comment_1.jpg" alt="">
-            <p>小米路由器3  →</p> 
-            <p>149元</p>
+            <img src="img/comment_3.jpg" alt="">
+            <p>小米胶囊耳机  →</p> 
+            <p>69元</p>
             </div>
             <div class="comment_p2">
-              <p>安装简洁方便，信号非常不错！已经完美吃了好几把鸡了！推荐给大家！大爱小米！</p>
-              <p>来自于 追溯PPQ 的评价</p>
+              <p>很小巧 像不喜欢戴活塞的人可以试试这种~很舒服 包装还是一如既往的简洁 要是有盒子就好了=￣ω￣=</p>
+              <p>来自于 鹤唳 | 的评价</p>
               <button>查看商品详情</button> 
             </div>
             </a>
@@ -348,13 +315,13 @@
           <li>
             <a href="">
             <div class="comment_p1">
-            <img src="img/comment_1.jpg" alt="">
-            <p>小米路由器3  →</p> 
-            <p>149元</p>
+            <img src="img/comment_4.jpg" alt="">
+            <p>小米插线板  →</p> 
+            <p>49元</p>
             </div>
             <div class="comment_p2">
-              <p>安装简洁方便，信号非常不错！已经完美吃了好几把鸡了！推荐给大家！大爱小米！</p>
-              <p>来自于 追溯PPQ 的评价</p>
+              <p>东西真心不错，用过最好用的插线板，做工外观没得挑剔，3个USB接口很实用，建议不包邮的应该在一百元以内定位。</p>
+              <p>来自于 yinyin1989 | 的评价</p>
               <button>查看商品详情</button> 
             </div>
             </a>
@@ -372,24 +339,28 @@
       <div class="video_list">
         <ul>
           <li>
-             <a href=""><span>▶</span></a>
+            <img src="img/video_1.jpg" alt="">
+             <a href="">▶</a>
              <p>一团火</p>
              <p>小米创业8年内部纪录片（手机篇）</p>
           </li>
           <li>
-            <a href=""><span>▶</span></a>
-            <p>一团火</p>
-            <p>小米创业8年内部纪录片（手机篇）</p>
+            <img src="img/video_2.jpg" alt="">
+            <a href="">▶</a>
+            <p>小米8，一部与众不同的手机</p>
+            <p>透明探索版，将科技与美学完美结合</p>
           </li>
           <li>
-            <a href=""><span>▶</span></a>
-            <p>一团火</p>
-            <p>小米创业8年内部纪录片（手机篇）</p>
+            <img src="img/video_3.jpg" alt="">
+            <a href="">▶</a>
+            <p>小米MIX 2S，一面科技 一面艺术</p>
+            <p>艺术品般陶瓷机身，惊艳、璀璨</p>
           </li>
           <li>
-            <a href=""><span>▶</span></a>
-            <p>一团火</p>
-            <p>小米创业8年内部纪录片（手机篇）</p>
+            <img src="img/video_4.jpg" alt="">
+            <a href="">▶</a>
+            <p>生活中无所不在的小爱同学</p>
+            <p>一句话搞定手机复杂操作</p>
           </li>
         </ul>
       </div>

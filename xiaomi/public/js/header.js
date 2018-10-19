@@ -17,10 +17,10 @@ $(function(){
               "http://127.0.0.1:3000/header/list"
             );
             self.res=res.data;
+            // console.log(res);
           })(this)  //这里把外边的this传进来使用，因为匿名函数自调的this指向的是全局，无法使用
         },
         methods:{
-          
         }
       })
       var $header_menu=$(".header_menu");
