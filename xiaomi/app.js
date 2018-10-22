@@ -6,6 +6,7 @@ const cors=require("cors");
 /*引入路由模块*/
 var header=require("./router/header");
 var index=require("./router/index");
+var products=require("./router/products");
 
 
 var app = express();
@@ -22,3 +23,4 @@ app.use(express.static(__dirname+'/public'));
 /*使用路由器来管理路由*/
 app.use("/header",header);
 app.use("/index",index);
+app.use("/products",products);

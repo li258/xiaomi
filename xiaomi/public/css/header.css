@@ -1,3 +1,6 @@
+.header_bg{
+  background: #FFF;
+}
 /* 顶部导航 */
 .header_top{
   background: #323232;
@@ -26,10 +29,12 @@ color: #fff;
   float: right;
 }
 .header_top  .ht_right .shopping_car{
-display: inline-block;
-margin-left: 10px;
-padding: 0 10px;
-font-weight: bold;
+  position: relative;
+  display: inline-block;
+  color: #afafaf;  
+  margin-left: 10px;
+  padding: 0 10px;
+  font-weight: bold;
 }
 
 .header_top  .ht_right .shopping_car:hover{
@@ -43,9 +48,22 @@ font-weight: bold;
   top: 5px;
   width: 1.5em;
 }
+.header_top .ht_right .shopping_car div{
+  position: absolute;
+  right: -4px;
+  width: 230px;
+  height: 150px;
+  background: #fff;
+  text-align: center;
+  transition: all 1s;
+}
+.ht_right .shopping_car div h3{
+  margin-top: 20px;
+}
 /* 标志导航 */
 .header_down{
   margin: 20px auto;
+  height: 80px;
 }
 .header_down .logo{
   float: left;

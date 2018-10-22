@@ -1,0 +1,247 @@
+/* 搜索页面包屑导航 */
+section div.dome{
+  margin-top: 80px;
+  font-size: 12px;
+  color: #aaa;
+  height: 40px;
+}
+/* 多级菜单导航 */
+.p_mune{
+  background: #FFF;
+  padding: 20px 0;
+}
+.p_mune .move_floor{
+  position: relative;
+  border-bottom:1px solid #ddd; 
+  transition: all 1s;
+}
+.p_mune .move_floor:last-child{
+  border: 0;
+}
+.p_mune .move_floor dl{
+  padding-left: 60px;
+  width: 1060px;
+  overflow: hidden;
+  margin: 0;
+  height: 45px;
+  transition: all 1s;
+}
+.p_mune .move_floor dl dt{
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #aaa;
+}
+.p_mune .move_floor dl dd{
+  /* position: aboslute; */
+  width: 174px;
+  float: left;
+  margin: 0;
+  padding: 12px 0;
+}
+.p_mune .move_floor span{
+  position: absolute;
+  right: 0;
+  top: 12px;
+  color: #5d5d5d;
+  cursor: pointer;
+}
+/* 商品列表 */
+.content{
+  margin-top: 40px;
+}
+.content .order{
+  height: 50px;
+}
+.content .order ul.left{
+  float: left;
+}
+.content .order ul.left li{
+  padding:0 30px;
+  border-left: 1px solid #ddd;
+}
+.content .order ul.left li:first-child{
+  padding-left: 0;
+  color: #fe6606;
+  border-left: 0;
+}
+.content .order ul.right{
+  float: right;
+}
+/* 列表内容 */
+.p_list{
+  height: 1560px;
+}
+.p_list .p_item{
+  position: relative;
+  float: left;
+  background: #FFF;
+  margin: 0px 25px 30px 0px;
+  padding-top: 56px;
+  width: 280px;
+  height: 300px;
+  text-align: center;
+  transition: all 0.6s;
+}
+.p_list .p_item:hover{
+  box-shadow: 3px 5px 20px #aaa;
+}
+.p_item div:first-child img{
+  width: 65%;
+}
+.p_item h3{
+  font-weight: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.p_item div.actions{
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  opacity: 0;
+  transition: all 0.6s;
+}
+.p_item div.actions a:last-child{
+  margin-left: 64px;
+
+}
+.p_item div.actions a{
+  color: #a5a5a5;
+}
+.p_item div.actions a:hover{
+  color: #fe6606;
+}
+/* 列表按钮 */
+.content .p_btn{
+  text-align: center;
+} 
+.p_btn ul{
+  margin-left: 37%;
+}
+.p_btn ul li{
+  font-size: 18px; 
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+.p_btn ul li:hover{
+  background: #fe6606;
+  color: #FFF;
+  border-color: #fe6606;
+}
+.p_btn ul li:first-child{
+  color: #aaa;
+  cursor: unset;
+}
+.p_btn ul li:first-child:hover{
+  color: #aaa;
+  background:none;
+  border-color:#aaa; 
+}
+.p_btn ul li:nth-child(2){
+  background: #fe6606;
+  color: #FFF;
+  border-color: #fe6606;
+}
+/* 您还看了 */
+.more{
+  margin-top: 120px;
+  height: 560px;
+}
+.more h2{
+  position: relative;
+  border-top: 1px solid #ddd;
+  font-weight: initial;
+  margin-bottom: 60px;
+}
+.more h2 span{
+  position: absolute;
+  left: 41%;
+  top: -22px;
+  color: #5d5d5d;
+  font-size: 30px;
+  padding: 0 60px;
+  background: #F9F8F8;
+}
+.more_list{
+  overflow: hidden;
+  height: 300px;
+
+}
+.more_list ul{
+  margin: 0;
+  padding: 10px  0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 1s;
+}
+.more_list ul li{
+  width: 234px;
+  height: 290px;
+  background: #FFF;
+  text-align:center ;
+  margin-right:14px;
+  transition: all 0.8s;
+}
+.more_list ul li:hover{
+  box-shadow: 2px 5px 20px #aaa;
+}
+.more_list ul li div img{
+  padding: 0 47px;
+  width: 140px;
+}
+.more_list ul li div h3{
+  font-weight: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.more_list ul li div p:nth-child(4){
+  position: relative;
+  top: 0;
+  opacity: 1;
+  color: #5d5d5d;
+  transition: all 0.6s;
+}
+.more_list ul li div a{
+  position: relative;
+  top:20px;
+  opacity: 0;
+  border: 2px solid #aaa;
+  padding: 5px 10px;
+  color: #5d5d5d;
+  transition: all 0.6s;
+}
+.more_list ul li div a:hover{
+  color:#FFF;
+  background: #fe6606;
+  border-color:#fe6606;
+}
+.more .chat{
+  margin-top: 20px;
+  margin-left: 48%;  
+  text-align: center;
+}
+.more .chat div{
+  float: left;
+  margin-right: 20px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  border: 2px solid #aaa;
+  color: #aaa;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.more .chat div:hover{
+  border-color:#fe6606;
+  color: #FFF;
+  background: #fe6606; 
+}
+.more .chat div.active{
+  border-color:#fe6606;
+  color: #FFF;
+  background: #fe6606; 
+}

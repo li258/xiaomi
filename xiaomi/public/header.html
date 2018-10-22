@@ -1,25 +1,30 @@
-<header>
+<header class="header_bg">
   <!-- 顶部导航 -->
   <div class="header_top">
     <div class="page_size">
       <div class="ht_left">
         <a href="index.html">小米商城</a><span>|</span>
-        <a href="#">MIUI</a><span>|</span>
-        <a href="#">IoT</a><span>|</span>
-        <a href="#">云服务</a><span>|</span>
-        <a href="#">金融</a><span>|</span>
-        <a href="#">有品</a><span>|</span>
-        <a href="#">小爱开放平台</a><span>|</span>
-        <a href="#">政企服务</a><span>|</span>
-        <a href="#">Select Region</a>
+        <a href="">MIUI</a><span>|</span>
+        <a href="">IoT</a><span>|</span>
+        <a href="">云服务</a><span>|</span>
+        <a href="">金融</a><span>|</span>
+        <a href="">有品</a><span>|</span>
+        <a href="">小爱开放平台</a><span>|</span>
+        <a href="">政企服务</a><span>|</span>
+        <a href="">Select Region</a>
       </div>
       <div class="ht_right">
           <a href="#">登录</a>
           <span>|</span>
           <a href="#">注册</a>
           <span>|</span>
-          <a href="#">消息通知</a>
-          <a href="#" class="shopping_car"><img src="img/shoppingcar.png" alt=""> 购物车（0）</a>
+          <a href="">消息通知</a>
+          <span href="" class="shopping_car"><img src="img/shoppingcar.png" alt=""> 购物车（0）
+            <div>
+              <h3>购物车空空如也……(Ｔ▽Ｔ)</h3>
+              <p>快去添加你喜爱的商品吧！！</p>
+            </div>
+          </span>
       </div>
     </div>
   </div>
@@ -30,13 +35,13 @@
     </div>
     <div class="search">
       <form>
-        <input type="text" placeholder=" 小米8　小米MIX 2S">
-        <input type="submit" class="search_icon" value="">
+        <input  @keyup.13="search_click()" v-model="keyword" type="text" placeholder=" 小米8　小米MIX 2S">
+        <input type="submit" @click.prevent="search_click()" class="search_icon" value="">
       </form>
     </div>
     <ul class="header_list">
       <li class="btn-xiaomi">
-        <a href="" data-trigger="dropdown">小米手机</a>
+        <a href="products.html" data-trigger="dropdown">小米手机</a>
         <div class="header_menu" >
           <ul class="nav">
             <li v-for="p in res.slice(1,6)">
@@ -48,7 +53,7 @@
         </div>
       </li>
       <li class="btn-xiaomi">
-        <a href=""  data-trigger="dropdown">红米</a>
+        <a href="products.html"  data-trigger="dropdown">红米</a>
         <div class="header_menu">
           <ul class="nav">
             <li v-for="p in res.slice(7,12)">
@@ -60,7 +65,7 @@
         </div>
       </li>
       <li class="btn-xiaomi">
-        <a href="" data-trigger="dropdown">电视</a>
+        <a href="products.html" data-trigger="dropdown">电视</a>
         <div class="header_menu">
           <ul class="nav">
             <li v-for="p in res.slice(21,25)">
@@ -72,7 +77,7 @@
         </div>
       </li>
       <li class="btn-xiaomi">
-        <a href="" data-trigger="dropdown">笔记本</a>
+        <a href="products.html" data-trigger="dropdown">笔记本</a>
         <div class="header_menu">
           <ul class="nav">
             <li v-for="p in res.slice(31,34)">
@@ -84,7 +89,7 @@
         </div>
       </li>
       <li class="btn-xiaomi">
-        <a href="" data-trigger="dropdown">空调</a>
+        <a href="products.html" data-trigger="dropdown">空调</a>
         <div class="header_menu">
           <ul class="nav">
             <li v-for="p in res.slice(42,43)">
@@ -96,7 +101,7 @@
         </div>
       </li>
       <li class="btn-xiaomi">
-        <a href="" data-trigger="dropdown">新品</a>
+        <a href="products.html" data-trigger="dropdown">新品</a>
         <div class="header_menu">
           <ul class="nav">
             <li v-for="p in res.slice(53,57)">

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>产品搜索列表——小米商城</title>
+  <link rel="icon" href="img/aa.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/aa.ico">
+  <link rel="Bookmark" href="img/aa.ico">
+  <link rel="stylesheet" href="css/both.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/vue.js"></script>
+  <script src="js/axios.min.js"></script>
+</head>
+<body>
+  <header id="header"></header>
+  <!-- 产品搜索列表主页 -->
+  <section>
+    <div class="page_size dome"><a href="">首页</a>　>　<a href="">全部结果</a>　>　<a href="" class="text_xiaomi">小米手机</a></div>
+    <!-- 多级菜单导航 -->
+    <div class="p_mune">
+      <div class="page_size move_floor">
+        <dl>
+          <dt>分类 ：</dt>
+          <dd class="text_xiaomi">全部</dd>
+          <dd><a href="">净化器</a></dd>
+          <dd><a href="">线材</a></dd>
+          <dd><a href="">品牌耳机</a></dd>
+          <dd><a href="">充电器</a></dd>
+          <dd><a href="">手机支架</a></dd>
+          <dd><a href="">保护壳/保护套</a></dd>
+          <dd><a href="">贴膜</a></dd>
+          <dd><a href="">智能硬件配件</a></dd>
+          <dd><a href="">线控耳机</a></dd>
+          <dd><a href="">其他配件</a></dd>
+          <dd><a href="">手机</a></dd>
+        </dl>
+        <span class="click">更多 〓</span>
+      </div>
+      <div class="page_size move_floor">
+         <dl>
+          <dt>机型 ：</dt>
+          <dd class="text_xiaomi">全部</dd>
+          <dd><a href="">小米8 青春版</a></dd>
+          <dd><a href="">小米8 屏幕指纹版</a></dd>
+          <dd><a href="">小米8 透明探索版</a></dd>
+          <dd><a href="">小米平板4 Plus</a></dd>
+          <dd><a href="">小米Max3</a></dd>
+          <dd><a href="">小米平板4</a></dd>
+          <dd><a href="">小米8</a></dd>
+          <dd><a href="">小米8 SE</a></dd>
+          <dd><a href="">小米6X</a></dd>
+          <dd><a href="">小米5X</a></dd>
+          <dd><a href="">小米Note 3</a></dd>
+          <dd><a href="">小米Max 2</a></dd>
+          <dd><a href="">小米6</a></dd>
+          <dd><a href="">小米5s Plus</a></dd>
+          <dd><a href="">小米5s</a></dd>
+        </dl>
+        <span class="click">更多 〓</span>
+      </div>
+      <div class="page_size move_floor">
+         <dl>
+          <dt>品牌 ：</dt>
+          <dd class="text_xiaomi">全部</dd>
+          <dd><a href="">小米</a></dd>
+          <dd><a href="">1MORE</a></dd>
+        </dl>
+      </div>
+    </div>
+    <!-- 商品列表 -->
+    <div class="content page_size">
+      <div class="order">
+        <ul class="left nav">
+          <li>推荐</li>
+          <li><a href="">新品</a></li>
+          <li><a href="">价格 ↑</a></li>
+          <li><a href="">评论最多</a></li>
+        </ul>
+        <ul class="right nav">
+          <li><input type="checkbox"> 查看评价</li>
+          <li><input type="checkbox"> 仅显示特惠商品</li>
+          <li><input type="checkbox"> 仅显示有货商品</li>
+        </ul>
+      </div>
+      <div class="p_list">
+        <div class="p_item" v-for="p in res.slice(1,17)">
+          <div><a href=""><img :src="p.img_url" alt=""></a></div>
+          <h3>{{p.pname}} {{p.details}}</h3>
+          <p class="text_xiaomi">{{p.price}} 元</p>
+          <div class="actions">
+            <a href="">❤ 喜欢</a>
+            <a href="">加入购物车 ✚</a>
+          </div>
+        </div>
+      </div>
+      <div class="p_btn">
+        <ul class="nav">
+          <li>上一页</li>
+          <li actived>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>下一页</li>
+        </ul>
+      </div>
+      <!-- 您还看了 -->
+      <div class="more page_size">
+        <h2>
+          <span>您还看了</span>
+        </h2>
+        <div class="more_list">
+          <ul>
+            <li v-for="p in res.slice(49,59)">
+              <div>
+                <img :src="p.img_url" alt="">
+                <h3>{{p.pname}}</h3>
+                <p class="text_xiaomi">{{p.price}}元</p>
+                <p>3664人好评</p>
+                <a href="">加入购物车</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="chat">
+          <div class="active">●</div>
+          <div>●</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
