@@ -1,13 +1,20 @@
 /* 商品详情页 */
 /* 头部导航 */
 .d_nav{
-  /* position: fixed; */
   width: 100%;
   margin-top: -20px;
   border-top:1px solid #ddd; 
   background: #ffffff;
   box-shadow: 0px 8px 10px #ccc;
   height: 60px;
+  z-index: 10;
+}
+.nav_top{  
+  position: fixed;
+  top:-10px;
+  opacity: 0;
+  display: none;
+  transition: all 1s;
 }
 .d_nav div{
   line-height: 60px;
@@ -47,7 +54,7 @@ div.alert p a.close{
   background: #FFF;
 }
 .d_info{
-  height: 1600px;
+  height: 1440px;
   padding: 60px 0;
 }
 /* 左边图片 */
@@ -55,20 +62,53 @@ div.alert p a.close{
   float: left;
   width: 46%;
   height: 100%;
-  padding-left: 40px;
+  padding-left: 60px;
+  position: relative;
+  box-sizing: border-box;
 }
 .d_info .d_left .big{
+  position: relative;
   border: 1px solid #aaa;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   text-align: center;
   margin-bottom: 20px;
 }
+.d_info .d_left .over{
+  height: 450px;
+}
 .d_info .d_left .small{
   border: 1px solid #aaa;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   text-align: center;
+}
+.d_info .d_left .big .mask{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #fe6606;
+  opacity: 0.3;
+}
+.onbig{
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
+}
+.none{
+  display: none;
+}
+.d_info .d_left .max{
+  width: 500px;
+  height: 500px;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+.d_info .d_left .max img{
+  width: 200%;
 }
 .d_info .d_left .small img,.d_info .d_left .big img{
   width: 96%;
@@ -116,4 +156,155 @@ div.alert p a.close{
 }
 .address>span:last-child{
   margin-left: 50px;
+}
+/* 机型版本 */
+.d_right .versions{
+  margin-top: 40px;
+}
+.d_right .versions p,.d_right .color p{
+  font-size: 18px;
+  color: #000;
+}
+.versions ul,.color ul,.serve ul{ 
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.versions ul li,.color ul li{
+  border:1px solid #ccc;
+  padding: 8px 16px;
+  width: 260px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.versions ul li:active,.color ul li:active{
+  border-color: #fe6606;
+  color: #fe6606;
+}
+.versions ul li{
+  display: flex;
+  justify-content: space-between;
+}
+.versions ul li span:last-child{
+  color: #aaa;
+}
+.d_right .color ul li{
+  text-align: center;
+}
+/* 保险服务 */
+.d_right>.serve>p{
+  font-size: 18px;
+  color: #000;
+}
+.d_right>.serve>p>a{
+  color: #fe6606;
+  float: right;
+}
+.serve ul li{
+  display: flex;
+  width: 600px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.serve ul li em{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-top: 16px;
+}
+.serve ul li em:active{
+  background: #FE6606;
+  border-color: #FE6606;
+}
+.serve ul li img{
+  margin-top: 28px;
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+}
+.serve ul li div p{
+  margin-bottom: 0;
+}
+.serve ul li div p:last-child{
+  margin-top: 5px;
+  height: 20px;
+  color: #a1a1a1;
+}
+.serve ul li span:last-child{
+  margin-left: 140px;
+  margin-top: 60px;
+  color: #aaa;
+}
+.serve ul li div p em{
+  border: 2px solid #ccc;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+/* 总计 */
+.d_right .pro_list{
+  background: #F9F8F8;
+  width: 610px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.d_right .pro_list ul{
+  list-style: none;
+  padding-left: 0;
+}
+.d_right .pro_list ul li:first-child{
+  color: #5c5c5c;
+  display: flex;
+  justify-content: space-between;
+}
+.d_right .pro_list ul li h2{
+  color: #FE6606;
+  margin-bottom: 0;
+}
+/* 购买按钮 */
+.d_right .buy_btn{
+  margin: 40px 0;
+}
+.buy_btn a{
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF; 
+  font-size: 18px;
+  opacity: 0.8;
+}
+.buy_btn a:hover{
+  opacity: 1;
+}
+.buy_btn a:first-child{
+  width: 300px;
+  height: 50px;
+  background: #fe6606;
+  margin-right: 20px;
+}
+.buy_btn a:last-child{
+  background: #a1a1a1;
+  width: 120px;
+  height: 50px;
+}
+
+.d_right>p:last-child>em{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-left: 2px;
+  border:2px solid #ccc;
+  border-radius: 50%;
+}
+/* 特别说明 */
+.special h2{
+  font-weight: inherit;
+}
+.special img{
+  width: 100%;
 }

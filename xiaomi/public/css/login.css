@@ -1,0 +1,33 @@
+/* 登录注册页面 */
+section{
+  background: #FFF;
+}
+.wrapper{
+  position: relative;
+}
+.wrapper div:first-child{   
+  background: url("../img/login_bg.jpg") no-repeat center;
+  height: 580px;
+}
+.wrapper .layout{
+  position: absolute;
+  top: 30px;
+  left: 940px;
+  width: 410px;
+  height: 520px;
+  background: #FFF;
+}
+
+
+/* 底部信息 */
+.info{
+  margin: 60px auto;
+  text-align: center;
+  color: #4e4e4e;
+}
+.info ul{
+  justify-content: center;
+}
+
+
+
