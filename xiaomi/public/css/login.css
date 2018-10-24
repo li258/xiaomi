@@ -5,20 +5,205 @@ section{
 .wrapper{
   position: relative;
 }
-.wrapper div:first-child{   
+.wrapper{   
   background: url("../img/login_bg.jpg") no-repeat center;
   height: 580px;
 }
 .wrapper .layout{
-  position: absolute;
-  top: 30px;
-  left: 940px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 120px;
   width: 410px;
   height: 520px;
   background: #FFF;
 }
+/* 登录 **************************************/
+.login_tabs ul{
+justify-content: space-evenly;
+margin-top: 26px;
+}
+.login_tabs ul li{
+  font-size: 22px;
+  cursor: pointer;
+}
+.login_tabs ul li:nth-child(2){
+  color: #aaaaaa;
+}
+.active{
+  color: #fe6606;
+}
+/* content1 */
+.login_tabs #content1{
+  margin: 30px;
+}
+#content1 form input{
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+#content1 form p{
+  height: 15px;
+}
+#content1 form input:last-child{
+  border: none;
+  background: #fe6606;
+  color: #FFF;
+  font-size: 18px;
+  cursor: pointer;
+}
+#content1 div p{
+  display: flex;
+  justify-content: space-between;
+}
+#content1 div p span:first-child a{
+  color: #fe6606;
+}
+#content1 div:nth-child(2) p span:last-child{
+  opacity: 0.7;
+}
+#content1 .others{
+  position: relative;
+  top:100px;
+}
+#content1 .others p{
+  border-top:1px solid #cccccc;
+  color: #cccccc;
+  margin: 0;
+}
+#content1 .others p span{
+  margin: 0 auto;
+  padding:0 8px;
+  position: relative;
+  top: -12px;
+  background: #FFF;
+}
+#content1 .others div{
+  display: flex;
+  justify-content: space-evenly;
+}
+#content1 .others div a i{
+  width: 24px;
+  height: 24px;
+}
+#content1 .others div .qq{
+  background-position: -144px -1px;
+}
+#content1 .others div .wb{
+  background-position: -174px -1px;
+}
+#content1 .others div .zfb{
+  background-position: -200px -1px;
+}
+#content1 .others div .wx{
+  background-position: -230px -1px;
+}
+/* content2 */
+#content2{
+  display: none;
+}
+#content2 div{
+  text-align: center;
+  margin-top: 100px;
+}
+#content2 div p span{
+  color: #fe6606;
+}
+#content2 div p:last-child{
+  color: #4e4e4e;
+}
 
-
+/* 注册 **************************************/
+.new{
+  /* display: none; */
+  box-sizing: border-box;
+  position: relative;
+  top: 15px;
+  left: 300px;
+  width: 800px;
+  height: 550px;
+  padding-top:20px;
+  background: #FFF;
+  /* text-align: center; */
+  opacity: 1;
+  transition: all 1s;
+}
+.new p:first-child{
+  margin-left: 360px;
+}
+.new h1{
+  margin-left: 320px;
+  font-weight: inherit;
+}
+.new .new_list{
+position: absolute;
+left:30%;
+text-align: left;
+}
+.new .new_list p{
+  margin: 2px;
+  color: #4e4e4e;
+}
+.new .new_list select{
+  border: 1px solid #aaa;
+  color:#4e4e4e; 
+  width: 320px;
+  height: 40px;
+}
+.new .new_list p.num{
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+.new .new_list .phonenum div{
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 2px;
+  box-sizing: border-box;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+.new .new_list .phonenum input{
+  width: 278px;
+  height: 34px;
+}
+.new .new_list .zc{
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 322px;
+  height: 40px;
+  background: #fe6606;
+  border: 0;
+  color: #FFF;  
+}
+.new .new_list p:last-child{
+  position: relative;
+  left: -70px;
+  color: #aaa;
+}
+.new .new_list p:last-child em{
+  display: inline-block;
+  width: 20px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #ffffff;
+  padding-left: 2px;
+}
+.new .new_list p:last-child em:active{
+  background: #FE6606;
+  border-color: #FE6606;
+}
+.new .return{
+  position: relative;
+  width: 60px;
+  top: 340px;
+  left: 700px;
+}
 /* 底部信息 */
 .info{
   margin: 60px auto;
@@ -28,6 +213,4 @@ section{
 .info ul{
   justify-content: center;
 }
-
-
 
