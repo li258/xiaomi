@@ -81,13 +81,13 @@
           <li><a href="">评论最多</a></li>
         </ul>
         <ul class="right nav">
-          <li><input type="checkbox"> 查看评价</li>
-          <li><input type="checkbox"> 仅显示特惠商品</li>
+          <li><input type="checkbox"> 查看评价　</li>
+          <li><input type="checkbox"> 仅显示特惠商品　</li>
           <li><input type="checkbox"> 仅显示有货商品</li>
         </ul>
       </div>
       <div class="p_list">
-        <div class="p_item" v-for="p in res.slice(1,17)">
+        <div class="p_item" v-for="p in res.products">
           <div><a href=""><img :src="p.img_url" alt=""></a></div>
           <h3>{{p.pname}} {{p.details}}</h3>
           <p class="text_xiaomi">{{p.price}} 元</p>
@@ -100,10 +100,8 @@
       <div class="p_btn">
         <ul class="nav">
           <li>上一页</li>
-          <li actived>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
+          <!-- 循环数字 -->
+          <li v-for="count in res.pageCount-1">{{count}}</li>
           <li>下一页</li>
         </ul>
       </div>
@@ -114,7 +112,7 @@
         </h2>
         <div class="more_list">
           <ul>
-            <li v-for="p in res.slice(49,59)">
+            <li v-for="p in res.products">
               <div>
                 <img :src="p.img_url" alt="">
                 <h3>{{p.pname}}</h3>

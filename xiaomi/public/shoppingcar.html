@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的购物车——小米商城</title>
+  <link rel="icon" href="img/aa.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/aa.ico">
+  <link rel="Bookmark" href="img/aa.ico">
+  <link rel="stylesheet" href="css/both.css">
+  <link rel="stylesheet" href="css/shoppingcar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/vue.js"></script>
+  <script src="js/axios.min.js"></script>
+</head>
+<body>
+  <!-- 购物车头部 -->
+  <header>
+    <div class="shop_top page_size">
+      <div class="logo">
+        <a href=""><img src="img/home.png" alt=""></a>
+      </div>
+      <div class="t_title">
+        <h2>我的购物车</h2>
+        <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+      </div>
+      <div class="login">
+        <a href="">登录</a>　|
+        <a href="">　注册</a>
+      </div>
+    </div>
+  </header>
+  <section>
+    <!-- 购物车列表 -->
+    <div class="car page_size">
+      <!-- 表头 -->
+      <div class="car_head">
+        <div class="choose">
+          <em> ✔</em>
+          <span>　全选</span>
+        </div>
+        <div class="pic"></div>
+        <div class="name">
+          <p>商品名称</p>
+        </div>
+        <div class="price">
+          <p>单价</p>
+        </div>
+        <div class="count">
+          <p>数量</p>
+        </div>
+        <div class="subtotal">
+          <p>小计</p>
+        </div>
+        <div class="operate">
+          <p>操作</p>
+        </div>
+      </div>
+      <!-- 表信息 -->
+      <div class="car_body" v-for="p in res.slice(5,9)">
+        <div class="choose">
+          <em> ✔</em>
+        </div>
+        <div class="pic">
+          <img :src="p.img_url" alt="">
+        </div>
+        <div class="name">
+          <p>{{p.pname}} {{p.details}} {{p.color}}</p>
+        </div>
+        <div class="price">
+          <p>{{p.price}}元</p>
+        </div>
+        <div class="count">
+          <p>
+            <button>-</button>
+            <span> 1 </span>
+            <button>+</button>
+          </p>
+        </div>
+        <div class="subtotal">
+          <p>{{p.price}}元</p>
+        </div>
+        <div class="operate">
+          <span>×</span>
+        </div>
+      </div>
+      <!-- 表底部 -->
+      <div class="foot_bg">
+        <div class="car_foot">
+          <div class="foot_left">
+            <p><a href="">继续购物</a>　　| 共<span></span>件商品，已选择<span> 0 </span>件</p>
+         </div>
+         <div class="foot_right">
+           <span class="buy">去结算</span>
+            <p>合计： <span class="total">3228元</span></p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer"></footer>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/shoppingcar.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

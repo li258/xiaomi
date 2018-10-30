@@ -10,16 +10,16 @@
   <link rel="Bookmark" href="img/aa.ico">
   <link rel="stylesheet" href="css/both.css">
   <link rel="stylesheet" href="css/login.css">
-   <script src="js/vue.js"></script>
+  <script src="js/vue.js"></script>
   <script src="js/axios.min.js"></script>
 </head>
 <body>
   <!-- 登录注册页面 -->
   <section>
     <div class="page_size">
-      <a href=""><img src="img/mistore_logo.png" alt=""></a>
+      <a href="index.html"><img src="img/mistore_logo.png" alt=""></a>
     </div>
-    <div class="wrapper page_size">
+    <div class="wrapper">
       <div class="layout page_size">
         <div class="login_tabs">
           <ul class="nav">
@@ -28,9 +28,9 @@
             <li><a>扫码登录 </a></li>
           </ul>
           <div id="content1">
-            <form action="">
-              <input type="text" placeholder="邮箱/手机号码/小米ID">
-              <input type="password" placeholder="密码">
+            <form method="get">
+              <input type="text" name="uname" placeholder="邮箱/手机号码/小米ID">
+              <input type="password" name="upwd" placeholder="密码">
               <p></p>
               <input type="submit" value="登　录">
             </form>
@@ -76,12 +76,14 @@
           </select>
           <p>成功注册帐号后，国家/地区将不能被修改</p>
           <p class="num">手机号码</p>
-          <div class="phonenum">
-            <div>+86</div>
-            <input type="text" placeholder="请输入手机号码">
-          </div>
-          <p></p>
-          <input type="submit" value="立即注册" class="zc">
+          <form method="get">
+            <div class="phonenum">
+              <div>+86</div>
+              <input type="text" placeholder="请输入手机号码">
+            </div>
+            <p></p>
+            <input type="submit" value="立即注册" class="zc">
+         </form>
           <p>
               <em>✔</em>
             注册帐号即表示您同意并愿意遵守小米
@@ -90,7 +92,7 @@
           </p>
         </div>
         <div class="return">
-          <a href="">返回 ☛</a>
+          <a>返回 ☛</a>
         </div>
       </div>
     </div>

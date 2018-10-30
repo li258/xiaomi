@@ -34,7 +34,7 @@
       <a href="index.html"><img src="img/logo.png" title="小米官网"></a>
     </div>
     <div class="search">
-      <form>
+      <form method="get">
         <input  @keyup.13="search_click()" v-model="keyword" type="text" placeholder=" 小米8　小米MIX 2S">
         <input type="submit" @click.prevent="search_click()" class="search_icon" value="">
       </form>
