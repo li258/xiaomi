@@ -10,7 +10,6 @@ new Vue({
       );
       self.res=res.data;
     })(this)
-    
   },
   methods:{
     

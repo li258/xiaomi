@@ -7,6 +7,7 @@ const cors=require("cors");
 var header=require("./router/header");
 var index=require("./router/index");
 var products=require("./router/products");
+var details=require("./router/details");
 var shoppingcar=require("./router/shoppingcar");
 
 
@@ -25,4 +26,5 @@ app.use(express.static(__dirname+'/public'));
 app.use("/header",header);
 app.use("/index",index);
 app.use("/products",products);
+app.use("/details",details);
 app.use("/shoppingcar",shoppingcar);

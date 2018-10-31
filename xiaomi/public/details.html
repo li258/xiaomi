@@ -43,21 +43,21 @@
           <div class="d_left">
             <div class="over">
               <div class="big">
-                <img src="img/phone_pms_3.jpg" alt="">
+                <img :src="res.product.img_url" alt="">
                 <div class="mask none"></div>
                 <div class="onbig"></div>
                 <div class="max none"></div>
               </div>
               <div class="small">
-                <img src="img/phone_pms_3.jpg" alt="">
+                <img :src="res.product.img_url" alt="">
               </div>
             </div>
           </div>
           <!-- 右边文字 -->
           <div class="d_right">
-            <h1>小米8</h1>
-            <p><span class="text_xiaomi">「全版本立省200元」</span>全球首款双频GPS / 骁龙845处理器 / 红外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏</p>
-            <p><span class="text_xiaomi">2499元</span>　<del>2699元</del></p>
+            <h1>{{res.product.pname}}</h1>
+            <p><span class="text_xiaomi">「全版本立省200元」</span>{{res.product.promise}}</p>
+            <p><span class="text_xiaomi">{{res.product.price}}元</span>　<del>{{res.product.price+200}}元</del></p>
             <p class="give"><span>　赠品　</span> 赠米粉卡，内含100元话费</p>
             <div class="address">
               <p><i class="allicon service_icon icon_location"></i> 北京　北京市　东城区　永定门外街道　<span class="text_xiaomi">修改</span></p>
@@ -67,19 +67,13 @@
             <div class="versions">
               <p>选择版本</p>
               <ul>
-                <li><span>6GB+64GB 全网通</span><span>2499元</span></li>
-                <li><span>6GB+64GB 全网通</span><span>2499元</span></li>
-                <li><span>6GB+64GB 全网通</span><span>2499元</span></li>
-                <li><span>6GB+64GB 全网通</span><span>2499元</span></li>
+                <li><span>{{res.specs[0].details}}</span><span>{{res.specs[0].price}}元</span></li>
               </ul>
             </div>
             <div class="color">
               <p>选择颜色</p>
               <ul>
-                <li>黑色</li>
-                <li>黑色</li>
-                <li>黑色</li>
-                <li>黑色</li>
+                <li>{{res.specs[0].color}}</li>
               </ul>
             </div>
             <!-- 保险服务 -->
@@ -108,8 +102,8 @@
             <!-- 总计 -->
             <div class="pro_list">
               <ul>
-                <li><span>小米8 6GB+64GB 黑色</span><span>2499元 <del>2699元</del></span></li>
-                <li><h2>总计： <span>2499</span>元</h2></li>
+                <li><span>{{res.product.pname}} {{res.product.details}} {{res.product.color}}</span><span>{{res.product.price}}元 <del>{{res.product.price+200}}元</del></span></li>
+                <li><h2>总计： <span>{{res.product.price}}</span>元</h2></li>
               </ul>
             </div>
             <!-- 购买按钮 -->

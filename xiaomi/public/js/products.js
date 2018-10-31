@@ -8,7 +8,7 @@ function loadPage(pno=0){   //默认值为零
     url:"products/list",
     type:"GET",
     data:{kw,pno},
-    // dataType:"json",
+    dataType:"json",
     success:function(res){
       new Vue({
         el:".content",
