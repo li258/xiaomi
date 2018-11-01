@@ -27,7 +27,7 @@
           <li><a href="products.html" data-trigger="dropright">手机 电话卡<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(1,17)">
+                <li v-for="p in res.slice(1,17)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -36,7 +36,7 @@
           <li><a href="products.html" data-trigger="dropright">电视 盒子<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(18,25)">
+                <li v-for="p in res.slice(18,25)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -45,7 +45,7 @@
           <li><a href="products.html" data-trigger="dropright">笔记本 平板<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(28,40)">
+                <li v-for="p in res.slice(28,40)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -54,7 +54,7 @@
           <li><a href="products.html" data-trigger="dropright">家电 插线板<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(41,46)">
+                <li v-for="p in res.slice(41,46)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -63,7 +63,7 @@
           <li><a href="products.html" data-trigger="dropright">出行 穿戴<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(46,48)">
+                <li v-for="p in res.slice(46,48)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -72,7 +72,7 @@
           <li><a href="products.html" data-trigger="dropright">智能 路由器<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(48,52)">
+                <li v-for="p in res.slice(48,52)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -81,7 +81,7 @@
           <li><a href="products.html" data-trigger="dropright">电源 配件<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(52,57)">
+                <li v-for="p in res.slice(52,57)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -90,7 +90,7 @@
           <li><a href="products.html" data-trigger="dropright">健康 儿童<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(51,59)">
+                <li v-for="p in res.slice(51,59)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -99,7 +99,7 @@
           <li><a href="products.html" data-trigger="dropright">耳机 音响<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(51,59)">
+                <li v-for="p in res.slice(51,59)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -108,7 +108,7 @@
           <li><a href="products.html" data-trigger="dropright">生活 箱包<span>></span></a>
             <div class="hero_menu" >
               <ul class="nav">
-                <li v-for="p in res.slice(51,59)">
+                <li v-for="p in res.slice(51,59)" @click="getall(p.lid)">
                   <a href=""><img :src="p.img_url" alt=""><span> {{p.pname}}</span></a>
                 </li>
               </ul>  
@@ -164,7 +164,7 @@
       <!-- 滑动列表 -->
       <div class="flash_list">
         <ul>
-          <li v-for="p in res.slice(40,52)">
+          <li v-for="p in res.slice(40,52)" @click="getall(p.lid)">
             <a href="#">
             <span> 秒杀价 </span>
             <img :src="p.img_url" alt="">
@@ -191,8 +191,8 @@
           </div>
           <div class="list_product">
             <ul>
-              <li v-for="p in res.slice(4,12)">
-                <a href="">
+              <li v-for="p in res.slice(4,12)" @click="getall(p.lid)">
+                <a>
                 <span>&nbsp;&nbsp;&nbsp;新品&nbsp;&nbsp;&nbsp;</span>
                 <img :src="p.img_url" alt="">
                 <p>{{p.pname}}{{p.details}}</p>
@@ -229,8 +229,8 @@
           </div>
           <div class="list_product">
             <ul>
-              <li v-for="p in res.slice(42,50)">
-                <a href="">
+              <li v-for="p in res.slice(42,50)" @click="getall(p.lid)">
+                <a>
                 <span>&nbsp;&nbsp;&nbsp;减价&nbsp;&nbsp;&nbsp;</span>
                 <img :src="p.img_url" alt="">
                 <p>{{p.pname}}</p>
@@ -254,8 +254,8 @@
       <!-- 推荐列表 -->
       <div class="flash_list">
         <ul>
-          <li v-for="p in res.slice(21,31)">
-            <a href="">
+          <li v-for="p in res.slice(21,31)" @click="getall(p.lid)">
+            <a>
             <span>　热销　</span>
             <img :src="p.img_url" alt="">
             <p>{{p.pname}}</p>
@@ -272,7 +272,7 @@
       <div class="comment_list">
         <ul>
           <li>
-            <a href="">
+            <a>
             <div class="comment_p1">
             <img src="img/comment_1.jpg" alt="">
             <p>小米路由器3  →</p> 
@@ -286,7 +286,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a>
             <div class="comment_p1">
             <img src="img/comment_2.jpg" alt="">
             <p>米家车载空气净化器  →</p> 
@@ -300,7 +300,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a>
             <div class="comment_p1">
             <img src="img/comment_3.jpg" alt="">
             <p>小米胶囊耳机  →</p> 
@@ -314,7 +314,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a>
             <div class="comment_p1">
             <img src="img/comment_4.jpg" alt="">
             <p>小米插线板  →</p> 

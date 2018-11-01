@@ -10,11 +10,49 @@
         new Vue({
           el:".d_main",
           data:{
-            res:[]
+            res
           },
           mounted(){
-            
-            console.log(res.product.img_url);
+            // console.log(this.res);
+            // 放大镜
+            var $big=$(".d_main .d_left .big");
+            var $max=$(".d_main .d_left .max");
+            var mx=res.product.img_url;
+            // console.log(mx);
+            $max.css("backgroundImage",`url(${mx})`);
+            $max.css("backgroundSize",`200% 200%`);
+            var $mask=$(".d_left .big .mask"),$onbig=$(".d_left .big .onbig");
+            var msize=200,smsize=400,max=smsize-msize;
+            $onbig.hover(function(){
+              $mask.toggleClass("none");
+              $max.toggleClass("none");
+            }).mousemove(function(e){
+              var top=e.offsetY-msize/2;
+              var left=e.offsetX-msize/2;
+              if (top<0){top=0;}else if (top>max){top=max;}
+              if (left<0){left=0;}else if (left>max){left=max;}
+              $mask.css({top,left});
+              $max.css("backgroundPosition",`${-2.5*left}px ${-2.5*top}px`)
+            })
+            // 选择版本按钮
+            var $versions=$(".d_right .versions ul li");
+            var $color=$(".d_right .color ul li")
+            $versions.click(function(){
+             var $this=$(this);
+              $this.addClass("active")
+              .siblings().removeClass("active");
+            })
+            $color.click(function(){
+             var $this=$(this);
+              $this.addClass("active")
+              .siblings().removeClass("active");
+            })
+            // 选择保障服务
+            var $serve=$(".serve ul li");
+            $serve.click(function(){
+            var $this=$(this);
+              $this.find("em").toggleClass("active")
+            })
           }
         })
       }
@@ -25,26 +63,8 @@
     $(this).parent().parent().hide()
   })
 
-  // 放大镜
-  var $big=$(".d_main .d_left .big");
-  var $max=$(".d_main .d_left .max");
-  var mx=$big.children(":first").attr("src");
-  $max.css("backgroundImage",`url(${mx})`);
-  $max.css("backgroundSize",`200% 200%`);
-  var $mask=$(".d_left .big .mask"),$onbig=$(".d_left .big .onbig");
-  var msize=200,smsize=400,max=smsize-msize;
-  $onbig.hover(function(){
-    $mask.toggleClass("none");
-    $max.toggleClass("none");
-  }).mousemove(function(e){
-    var top=e.offsetY-msize/2;
-    var left=e.offsetX-msize/2;
-    if (top<0){top=0;}else if (top>max){top=max;}
-    if (left<0){left=0;}else if (left>max){left=max;}
-    $mask.css({top,left});
-    $max.css("backgroundPosition",`${-2.5*left}px ${-2.5*top}px`)
-  })
-  //页面滚动，浮动元素
+  
+  // 页面滚动，浮动元素
   $(window).scroll(function(){
     if ($(window).scrollTop()>150){
       $(".nav_top").show()
@@ -64,5 +84,6 @@
     }
   })
 
+  // 
 })()
 

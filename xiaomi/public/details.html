@@ -67,13 +67,13 @@
             <div class="versions">
               <p>选择版本</p>
               <ul>
-                <li><span>{{res.specs[0].details}}</span><span>{{res.specs[0].price}}元</span></li>
+                <li v-for="p in res.specs.slice(0,6)"><span>{{p.details}}</span><span>{{p.price}}元</span></li>
               </ul>
             </div>
             <div class="color">
               <p>选择颜色</p>
               <ul>
-                <li>{{res.specs[0].color}}</li>
+                <li v-for="p in res.specs.slice(0,6)">{{p.color}}</li>
               </ul>
             </div>
             <!-- 保险服务 -->
@@ -84,18 +84,18 @@
                   <div>
                     <span>意外保障服务</span>
                     <p>手机意外摔落/进水/碾压等损坏</p>
-                    <p><em> ✔ </em> 我已阅读 <a href="">服务条款</a> | <a href="">常见问题</a></p>
+                    <p><em>✔ </em> 我已阅读 <a href="">服务条款</a> | <a href="">常见问题</a></p>
                   </div>
                   <span>249元</span>
                 </li>
                 <li><em>✔</em><img src="img/server.jpg" alt="">
                   <div>
-                    <span>碎屏保障服务</span>
+                  <span>碎屏保障服务</span>
                     <p>手机意外碎屏</p>
-                    <p><em> ✔ </em> 我已阅读 <a href="">服务条款</a> | <a href="">常见问题</a></p>
+                    <p><em>✔ </em> 我已阅读 <a href="">服务条款</a> | <a href="">常见问题</a></p>
                   </div>
                   <span>129元</span>
-                </li>
+              </li>
               </ul>
 
             </div>

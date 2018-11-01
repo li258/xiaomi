@@ -44,8 +44,8 @@
         <a href="products.html" data-trigger="dropdown">小米手机</a>
         <div class="header_menu" >
           <ul class="nav">
-            <li v-for="p in res.slice(1,6)">
-              <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(1,6)" @click="getall(p.lid)">
+              <a><img :src="p.img_url" alt=""></a>
               <p>{{p.pname}}</p>
               <p>{{p.price}}元起</p>
             </li>
@@ -56,8 +56,8 @@
         <a href="products.html"  data-trigger="dropdown">红米</a>
         <div class="header_menu">
           <ul class="nav">
-            <li v-for="p in res.slice(7,12)">
-              <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(7,12)" @click="getall(p.lid)">
+              <a><img :src="p.img_url" alt=""></a>
               <p>{{p.pname}}</p>
               <p>{{p.price}}元起</p>
             </li>
@@ -68,8 +68,8 @@
         <a href="products.html" data-trigger="dropdown">电视</a>
         <div class="header_menu">
           <ul class="nav">
-            <li v-for="p in res.slice(21,25)">
-                <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(21,25)" @click="getall(p.lid)">
+                <a><img :src="p.img_url" alt=""></a>
                 <p>{{p.pname}}</p>
                 <p>{{p.price}}元起</p>
             </li>
@@ -80,8 +80,8 @@
         <a href="products.html" data-trigger="dropdown">笔记本</a>
         <div class="header_menu">
           <ul class="nav">
-            <li v-for="p in res.slice(31,34)">
-                <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(31,34)" @click="getall(p.lid)">
+                <a><img :src="p.img_url" alt=""></a>
                 <p>{{p.pname}}</p>
                 <p>{{p.price}}元起</p>
             </li>
@@ -92,8 +92,8 @@
         <a href="products.html" data-trigger="dropdown">空调</a>
         <div class="header_menu">
           <ul class="nav">
-            <li v-for="p in res.slice(42,43)">
-                <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(42,43)" @click="getall(p.lid)">
+                <a><img :src="p.img_url" alt=""></a>
                 <p>{{p.pname}}</p>
                 <p>{{p.price}}元起</p>
             </li>
@@ -104,18 +104,18 @@
         <a href="products.html" data-trigger="dropdown">新品</a>
         <div class="header_menu">
           <ul class="nav">
-            <li v-for="p in res.slice(53,57)">
-                <a href=""><img :src="p.img_url" alt=""></a>
+            <li v-for="p in res.slice(53,57)" @click="getall(p.lid)">
+                <a><img :src="p.img_url" alt=""></a>
                 <p>{{p.pname}}</p>
                 <p>{{p.price}}元起</p>
             </li>
           </ul>
         </div>
       </li>
-      <li class="btn-xiaomi"><a href="">路由器</a></li>
-      <li class="btn-xiaomi"><a href="">智能硬件</a></li>
-      <li class="btn-xiaomi"><a href="">服务</a></li>
-      <li class="btn-xiaomi"><a href="">社区</a></li>
+      <li class="btn-xiaomi"><a>路由器</a></li>
+      <li class="btn-xiaomi"><a>智能硬件</a></li>
+      <li class="btn-xiaomi"><a>服务</a></li>
+      <li class="btn-xiaomi"><a>社区</a></li>
     </ul>
   </div>
 </header>

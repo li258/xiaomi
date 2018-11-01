@@ -54,7 +54,7 @@ div.alert p a.close{
   background: #FFF;
 }
 .d_info{
-  height: 1440px;
+  height: 1540px;
   padding: 60px 0;
 }
 /* 左边图片 */
@@ -152,7 +152,7 @@ div.alert p a.close{
   vertical-align:bottom;
 }
 .address .icon_location{
-  background-position: -120px 0px;
+  background-position: -119px 0px;
 }
 .address>span:last-child{
   margin-left: 50px;
@@ -179,8 +179,13 @@ div.alert p a.close{
   line-height: 30px;
   margin-right: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .versions ul li:active,.color ul li:active{
+  border-color: #fe6606;
+  color: #fe6606;
+}
+.versions .active,.color .active{
   border-color: #fe6606;
   color: #fe6606;
 }
@@ -219,6 +224,10 @@ div.alert p a.close{
   margin-top: 16px;
 }
 .serve ul li em:active{
+  background: #FE6606;
+  border-color: #FE6606;
+}
+.serve ul li .active{
   background: #FE6606;
   border-color: #FE6606;
 }

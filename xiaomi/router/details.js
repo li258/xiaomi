@@ -17,7 +17,7 @@ router.get("/",(req,res)=>{
       })
     })
     // 2.按照lid查询同系列共有几种不同型号，颜色——异步
-    var sql=`SELECT lid,details,color,img_url FROM xm_product 
+    var sql=`SELECT lid,details,color,img_url,price FROM xm_product 
     WHERE family_id=(
       SELECT family_id FROM xm_product WHERE lid=?)`;
     await new Promise(function(open){

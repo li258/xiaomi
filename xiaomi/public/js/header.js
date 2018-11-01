@@ -19,6 +19,9 @@ $.ajax({
         })(this)  //这里把外边的this传进来使用，因为匿名函数自调的this指向的是全局，无法使用
       },
       methods:{
+        getall(a){
+          window.location.href="http://127.0.0.1:3000/details.html?lid="+a
+        },
         search_click(){
           location.href=`http://127.0.0.1:3000/products.html?kw=${$input.val().trim()}`;  //.trim()去掉两端空字符，才能完整匹配
         }
@@ -37,7 +40,9 @@ $.ajax({
       $(this).children(":last").hide()
       .css({left:-40,opacity:0});
     })	
-
+    $(".ht_right>a").click(function(){
+      window.location.href="http://127.0.0.1:3000/login.html"
+    })
     // 购物车
     var $shopping_car=$(".shopping_car>div");
     $shopping_car.hide();
@@ -49,6 +54,9 @@ $.ajax({
     .mouseout(function(){
       $shopping_car.hide()
       .css({top:0,opacity:0});
+    })
+    $shopping_car.parent().click(function(){
+      window.location.href="http://127.0.0.1:3000/shoppingcar.html"
     })
     
     //搜索

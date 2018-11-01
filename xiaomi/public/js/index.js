@@ -12,7 +12,9 @@ new Vue({
     })(this)
   },
   methods:{
-    
+    getall(a){
+      window.location.href="http://127.0.0.1:3000/details.html?lid="+a
+    }
   }
 })
 // console.log(res);
