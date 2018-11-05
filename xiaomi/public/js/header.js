@@ -62,6 +62,7 @@ $.ajax({
     //搜索
     $(function(){
       $search=$(".search .search_icon");
+      console.log($search);
       var $input=$search.prev();
       // console.log($input.html());
       if (location.search.indexOf("kw=")!==-1){

@@ -17,6 +17,11 @@ function loadPage(pno=0){   //默认值为零
         },
         created(){
         },
+        methods:{
+          getall(a){
+            window.location.href="http://127.0.0.1:3000/details.html?lid="+a
+          }
+        },
         mounted(){
            //商品查询列表分页按钮
           var $ul=$(".content .p_btn ul");

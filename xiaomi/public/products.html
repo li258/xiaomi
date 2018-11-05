@@ -87,13 +87,13 @@
         </ul>
       </div>
       <div class="p_list">
-        <div class="p_item" v-for="p in res.products">
-          <div><a href=""><img :src="p.img_url" alt=""></a></div>
+        <div class="p_item" v-for="p in res.products" @click="getall(p.lid)">
+          <div><a><img :src="p.img_url" alt=""></a></div>
           <h3>{{p.pname}} {{p.details}}</h3>
           <p class="text_xiaomi">{{p.price}} 元</p>
           <div class="actions">
-            <a href="">❤ 喜欢</a>
-            <a href="">加入购物车 ✚</a>
+            <a>❤ 喜欢</a>
+            <a href="shoppingcar.html">加入购物车 ✚</a>
           </div>
         </div>
       </div>
@@ -112,13 +112,13 @@
         </h2>
         <div class="more_list">
           <ul>
-            <li v-for="p in res.products">
+            <li v-for="p in res.products" @click="getall(p.lid)">
               <div>
                 <img :src="p.img_url" alt="">
                 <h3>{{p.pname}}</h3>
                 <p class="text_xiaomi">{{p.price}}元</p>
                 <p>3664人好评</p>
-                <a href="">加入购物车</a>
+                <a href="shoppingcar.html">加入购物车</a>
               </div>
             </li>
           </ul>
